@@ -1,0 +1,4 @@
+session-id: ''
+logging.level:
+  root: INFO
+  ru.davydov.deal.calculator.service.tinkoff: INFO
