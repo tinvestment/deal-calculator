@@ -3,6 +3,7 @@ package ru.davydov.deal.calculator.controller;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 import ru.davydov.deal.calculator.dto.getoperation.request.GetOperationsBody;
 import ru.davydov.deal.calculator.dto.getoperation.response.Item;
 import ru.davydov.deal.calculator.service.tinkoff.main.MainApi;
@@ -13,6 +14,7 @@ import java.time.OffsetDateTime;
 import java.util.stream.Collectors;
 
 @Slf4j
+@Component
 @RequiredArgsConstructor
 public class Controller {
 

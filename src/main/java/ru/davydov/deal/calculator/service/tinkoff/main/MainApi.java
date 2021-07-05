@@ -11,7 +11,7 @@ import ru.davydov.deal.calculator.dto.sessionstatus.SessionStatus;
 
 import java.util.concurrent.TimeUnit;
 
-@FeignClient(name = "tinkoff-main-api", url = "${rest.tinkoff-main-api.url}https://www.tinkoff.ru/api", configuration = MainApi.Configuration.class)
+@FeignClient(name = "tinkoff-main-api", url = "${rest.tinkoff-main-api.url}", configuration = MainApi.Configuration.class)
 public interface MainApi {
 
     @GetMapping(path = "common/v1/session_status")
