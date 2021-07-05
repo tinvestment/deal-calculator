@@ -1,4 +1,4 @@
-package ru.davydov.deal.calculator.service.tinkoff;
+package ru.davydov.deal.calculator.service.tinkoff.main;
 
 import feign.Logger;
 import feign.Request;
@@ -11,7 +11,7 @@ import ru.davydov.deal.calculator.dto.sessionstatus.SessionStatus;
 
 import java.util.concurrent.TimeUnit;
 
-@FeignClient(name = "tinkoff-main-api", url = "https://www.tinkoff.ru/api", configuration = MainApi.Configuration.class)
+@FeignClient(name = "tinkoff-main-api", url = "${rest.tinkoff-main-api.url}https://www.tinkoff.ru/api", configuration = MainApi.Configuration.class)
 public interface MainApi {
 
     @GetMapping(path = "common/v1/session_status")
@@ -19,7 +19,7 @@ public interface MainApi {
     
     class Configuration {
         @Bean
-        public Logger.Level level(@Value("${rest.tinkoff-main-api.logger-level:FULL}") Logger.Level level) {
+        public Logger.Level level(@Value("${rest.tinkoff-main-api.logger-level:BASIC}") Logger.Level level) {
             return level;
         }
 

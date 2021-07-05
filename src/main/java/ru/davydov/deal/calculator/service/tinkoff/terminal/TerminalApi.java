@@ -1,4 +1,4 @@
-package ru.davydov.deal.calculator.service.tinkoff;
+package ru.davydov.deal.calculator.service.tinkoff.terminal;
 
 import feign.Logger;
 import feign.Request;
@@ -15,7 +15,7 @@ import ru.davydov.deal.calculator.dto.getoperation.response.Operations;
 
 import java.util.concurrent.TimeUnit;
 
-@FeignClient(name = "tinkoff-terminal-api", url = "https://api-invest.tinkoff.ru/trading", configuration = TerminalApi.Configuration.class)
+@FeignClient(name = "tinkoff-terminal-api", url = "${rest.tinkoff-terminal-api.url}", configuration = TerminalApi.Configuration.class)
 public interface TerminalApi {
 
     @GetMapping(path = "/user/broker_accounts")
@@ -30,7 +30,7 @@ public interface TerminalApi {
 
     class Configuration {
         @Bean
-        public Logger.Level level(@Value("${rest.tinkoff-terminal-api.logger-level:FULL}") Logger.Level level) {
+        public Logger.Level level(@Value("${rest.tinkoff-terminal-api.logger-level:BASIC}") Logger.Level level) {
             return level;
         }
 
