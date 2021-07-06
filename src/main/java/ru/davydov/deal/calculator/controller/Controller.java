@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import ru.davydov.deal.calculator.dto.getoperation.request.GetOperationsBody;
 import ru.davydov.deal.calculator.dto.getoperation.response.Item;
-import ru.davydov.deal.calculator.service.tinkoff.main.MainApi;
-import ru.davydov.deal.calculator.service.tinkoff.terminal.TerminalApi;
+import ru.davydov.deal.calculator.service.rest.tinkoff.main.MainApi;
+import ru.davydov.deal.calculator.service.rest.tinkoff.terminal.TerminalApi;
 
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;

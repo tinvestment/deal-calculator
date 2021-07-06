@@ -8,7 +8,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import ru.davydov.deal.calculator.controller.Controller;
-import ru.davydov.deal.calculator.service.FeignMarker;
+import ru.davydov.deal.calculator.service.rest.tinkoff.FeignMarker;
 
 @Slf4j
 @SpringBootApplication

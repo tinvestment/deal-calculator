@@ -1,4 +1,4 @@
-package ru.davydov.deal.calculator.service.tinkoff.terminal;
+package ru.davydov.deal.calculator.service.rest.tinkoff.terminal;
 
 import feign.Logger;
 import feign.Request;
