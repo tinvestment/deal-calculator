@@ -10,9 +10,9 @@
     </parent>
     <groupId>ru.davydov</groupId>
     <artifactId>deal-calculator</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.1.0</version>
     <name>deal-calculator</name>
-    <description>Demo project for Spring Boot</description>
+
     <properties>
         <java.version>11</java.version>
     </properties>
@@ -53,7 +53,14 @@
             <artifactId>okhttp-spring-boot-starter</artifactId>
             <version>2.4.5.1</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.datastax.oss</groupId>
+            <artifactId>java-driver-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-cassandra</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>

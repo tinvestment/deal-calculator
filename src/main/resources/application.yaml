@@ -1,4 +1,4 @@
-tinkoff.session-id: ''
+tinkoff.session-id: 'Ld9WxOtUs15eduHUJ5SlxELkiVFKxL2f.m1-prod-api115'
 rest:
   tinkoff-terminal-api:
     url: https://api-invest.tinkoff.ru/trading
@@ -6,6 +6,20 @@ rest:
     app-version: "2.0.0"
   tinkoff-main-api:
     url: https://www.tinkoff.ru/api
+spring:
+  data:
+    cassandra:
+      keyspace-name: investment
+      contact-points: 127.0.0.1:9042, 127.0.0.1:9043, 127.0.0.1:9044
+      request:
+        consistency: local_quorum
+        throttler:
+          max-queue-size: 3
+          type: concurrency_limiting
+          max-concurrent-requests: 3
+      username: deal_calculator
+      password: deal_calculator
+      local-datacenter: Mars
 logging.level:
   root: INFO
   ru.davydov.deal.calculator.service.tinkoff: INFO
