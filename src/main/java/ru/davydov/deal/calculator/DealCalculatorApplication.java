@@ -22,7 +22,7 @@ public class DealCalculatorApplication {
     @Bean
     public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
         var controller = ctx.getBean(Controller.class);
-        controller.calculateFinResult();
+        controller.extractAllDeals();
         return args -> {
         };
     }
