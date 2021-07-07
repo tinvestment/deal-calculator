@@ -1,4 +1,4 @@
-tinkoff.session-id: 'Ld9WxOtUs15eduHUJ5SlxELkiVFKxL2f.m1-prod-api115'
+tinkoff.session-id: ''
 rest:
   tinkoff-terminal-api:
     url: https://api-invest.tinkoff.ru/trading
