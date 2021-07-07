@@ -17,3 +17,5 @@ CREATE TABLE IF NOT EXISTS deal
             WITH CLUSTERING ORDER BY (date_time DESC) AND COMMENT = 'Client deal';
 
 CREATE ROLE IF NOT EXISTS deal_calculator WITH LOGIN = true AND PASSWORD = 'deal_calculator';
+GRANT SELECT ON investment.deal TO deal_calculator;
+GRANT MODIFY ON investment.deal TO deal_calculator;
