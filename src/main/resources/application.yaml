@@ -6,6 +6,9 @@ rest:
     app-version: "2.0.0"
   tinkoff-main-api:
     url: https://www.tinkoff.ru/api
+  central-bank-rf-api:
+    url: https://www.cbr.ru/scripts
+
 spring:
   data:
     cassandra:
@@ -22,4 +25,4 @@ spring:
       local-datacenter: Mars
 logging.level:
   root: INFO
-  ru.davydov.deal.calculator.service.tinkoff: INFO
+  ru.davydov.deal.calculator.service: INFO

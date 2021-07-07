@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Valuta">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" name="Item">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Name" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>Название валюты</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="EngName" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>англ. название валюты</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="Nominal" type="xs:unsignedInt">
+								<xs:annotation>
+									<xs:documentation>номинал. ед</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="ParentCode" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>Внутренний уникальный код валюты, которая являлась базовой(предыдущей) для данной валюты</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="ISO_Num_Code" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>ISO Букв. код валюты</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="ISO_Char_Code" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>ISO Цифр. код валюты</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						
+						</xs:sequence>
+						<xs:attribute name="ID" type="xs:string" use="required">
+							<xs:annotation>
+								<xs:documentation>Внутренний уникальный код валюты</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>Имя документа</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
