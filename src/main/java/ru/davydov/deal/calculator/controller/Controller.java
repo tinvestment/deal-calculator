@@ -51,8 +51,10 @@ public class Controller {
                     .overnightsDisabled(true)
                     .brokerAccountId(agreementNumber)
                     .build();
+            log.info("from {}, to {}", operationsFromDate.toString(), operationsToDate.toString());
             var operations = terminalApi.getOperations("invest_terminal", sessionId, getOperationsBody);
-            operations.getPayload().getItems().forEach(investDao::addDeal);
+                operations.getPayload().getItems().forEach(investDao::addDeal);
+            operationsToDate = operationsFromDate;
         } while (account.getStartDate().isBefore(operationsFromDate));
     }
 
