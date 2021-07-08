@@ -13,13 +13,13 @@ spring:
   data:
     cassandra:
       keyspace-name: investment
-      contact-points: 127.0.0.1:9042, 127.0.0.1:9043, 127.0.0.1:9044
+      contact-points: 127.0.0.1:9042
       request:
         consistency: local_quorum
         throttler:
-          max-queue-size: 3
+          max-queue-size: 30
           type: concurrency_limiting
-          max-concurrent-requests: 3
+          max-concurrent-requests: 5
       username: deal_calculator
       password: deal_calculator
       local-datacenter: Mars

@@ -31,4 +31,6 @@ public class Item {
     private String color;
     private String textColor;
     private Set<Trade> trades;
+    private BigDecimal currencyCbExchangeRate;
+    private BigDecimal paymentInRub;
 }

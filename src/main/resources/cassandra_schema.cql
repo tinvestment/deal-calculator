@@ -5,17 +5,19 @@ USE investment;
 
 CREATE TABLE IF NOT EXISTS deal
 (
-    id                    bigint,
-    account_number        text,
-    date_time             timestamp,
-    operation_type        text,
-    currency              text,
-    quantity              decimal,
-    payment               decimal,
-    ticker                text,
-    isin                  text,
-    instrument_short_name text,
-    status                text,
+    id                        bigint,
+    account_number            text,
+    date_time                 timestamp,
+    operation_type            text,
+    currency                  text,
+    quantity                  decimal,
+    payment                   decimal,
+    ticker                    text,
+    isin                      text,
+    instrument_short_name     text,
+    status                    text,
+    currency_cb_exchange_rate decimal,
+    payment_in_rub            decimal,
     PRIMARY KEY ((account_number), date_time)
 ) WITH CLUSTERING ORDER BY (date_time DESC) AND COMMENT = 'Client deal';
 

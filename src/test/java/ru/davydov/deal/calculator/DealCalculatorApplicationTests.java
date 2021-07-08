@@ -15,6 +15,7 @@ class DealCalculatorApplicationTests {
 
     @Test
     void contextLoads() {
+        controller.updateCurrencyHandbook();
         controller.extractAllDeals();
     }
 
